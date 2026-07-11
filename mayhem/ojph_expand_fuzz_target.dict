@@ -1,0 +1,27 @@
+# JPEG2000 / HTJ2K codestream marker dictionary for ojph_expand_fuzz_target.
+# Markers are 0xFF followed by a marker byte. The fuzzer's first 2 bytes are
+# decoder-control bytes; the J2K codestream starts at byte 2 with SOC (FF4F).
+# Delimiting / header markers
+soc="\xff\x4f"
+sot="\xff\x90"
+sod="\xff\x93"
+eoc="\xff\xd9"
+siz="\xff\x51"
+cod="\xff\x52"
+coc="\xff\x53"
+rgn="\xff\x5e"
+qcd="\xff\x5c"
+qcc="\xff\x5d"
+poc="\xff\x5f"
+tlm="\xff\x55"
+plm="\xff\x57"
+plt="\xff\x58"
+ppm="\xff\x60"
+ppt="\xff\x61"
+crg="\xff\x63"
+com="\xff\x64"
+# HT (high-throughput) / extension capability marker
+cap="\xff\x50"
+cpf="\xff\x59"
+# Common SIZ capability/profile words
+soc_siz="\xff\x4f\xff\x51"

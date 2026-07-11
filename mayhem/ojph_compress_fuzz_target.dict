@@ -1,0 +1,13 @@
+# Dictionary for ojph_compress_fuzz_target.
+# This target does NOT parse a codestream — its input is 4 control bytes
+# (width-1, height-1, comp/depth/flags, decomp/planar) followed by raw pixel
+# samples. The tokens below seed interesting control-byte combinations:
+#   reversible/irreversible, color-transform, planar, multi-component, decomps.
+small_gray_rev="\x07\x07\x20\x00"
+small_gray_irrev="\x07\x07\x00\x00"
+rgb_rev_ct="\x0f\x0f\x62\x01"
+rgb_irrev_ct="\x0f\x0f\x42\x02"
+multi_decomp="\x3f\x3f\x21\x05"
+planar="\x3f\x3f\x21\x08"
+sixteen_bit="\x1f\x1f\x0c\x02"
+twelve_bit="\x1f\x1f\x08\x01"

@@ -1,0 +1,9 @@
+project: openjph
+target: ojph_expand_fuzz_target
+cmds:
+  - cmd: /mayhem/ojph_expand_fuzz_target
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/ojph_expand_fuzz_target.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ojph_expand_fuzz_target/testsuite
